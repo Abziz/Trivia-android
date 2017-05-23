@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abziz.trivia.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40sp"
+                app:bootstrapBrand="danger"
+                app:bootstrapText="{fa_android}SHITTY TRIVIA{fa_android}" />
+                <android.support.v4.widget.Space
+                android:layout_width="match_parent"
+                android:layout_height="30sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:textSize="18sp"
+                        app:bootstrapText="Set up the game and press START {fa_gamepad}" />
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lines="1"
+                        android:textSize="18sp"
+                        app:bootstrapText="You have 20 seconds for each question {fa_hourglass}" />
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        app:bootstrapText="if you dont answer in time you lose one {fa_heart}" />
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        app:bootstrapText="game is over when you're ran out of lives {fa_wheelchair}" />
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp" />
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="2dp"
+                        android:textSize="18sp"
+                        app:bootstrapText="Select questions type:" />
+
+                    <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                        android:id="@+id/btn_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        app:bootstrapBrand="info"
+                        app:bootstrapSize="lg"
+                        app:buttonMode="checkbox"
+                        app:roundedCorners="true"
+                        app:showOutline="true">
+
+
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/true_false"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:bootstrapText="TRUE/FALSE"
+                            app:buttonMode="checkbox" />
+
+                        <com.beardedhen.androidbootstrap.BootstrapButton
+                            android:id="@+id/multiple"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:bootstrapText="MULTIPLE CHOICES"
+                            app:buttonMode="checkbox" />
+                    </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp" />
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        app:bootstrapText="Select category:" />
+
+                    <Spinner
+                        android:id="@+id/select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:dropDownWidth="match_parent"
+                        android:spinnerMode="dialog">
+
+                    </Spinner>
+                    <android.support.v4.widget.Space
+                        android:layout_width="match_parent"
+                        android:layout_height="30sp" />
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        app:bootstrapText="Enter your name:" />
+
+                    <EditText
+                        android:id="@+id/name"
+                        android:maxLines="1"
+                        android:inputType="text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/start"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:bootstrapText="START{fa_gamepad}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/spinner"
+            style="@style/AVLoadingIndicatorView.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicatorColor="#888"
+            app:indicatorName="LineSpinFadeLoaderIndicator" />
+    </RelativeLayout>
+</FrameLayout>
