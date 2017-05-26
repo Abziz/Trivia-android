@@ -5,5 +5,111 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.abziz.trivia.Trivia">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+            <com.beardedhen.androidbootstrap.BootstrapProgressBar
+                app:bootstrapBrand="info"
+                app:bootstrapProgress="100"
+                app:striped="true"
+                app:animated="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                app:bootstrapText="Question #?"
+                android:textSize="@dimen/bootstrap_h4_text_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <com.beardedhen.androidbootstrap.BootstrapWell
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:textSize="@dimen/bootstrap_h5_text_size"
+
+                    app:bootstrapText="lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </com.beardedhen.androidbootstrap.BootstrapWell>
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:orientation="vertical"
+                app:roundedCorners="true"
+                app:bootstrapSize="lg"
+                app:bootstrapBrand="secondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    app:bootstrapText="answer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    app:bootstrapText="answer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    app:bootstrapText="answer3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    app:bootstrapText="answer4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="invisible">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/spinner"
+            style="@style/AVLoadingIndicatorView.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:indicatorColor="#888"
+            app:indicatorName="LineSpinFadeLoaderIndicator" />
+    </RelativeLayout>
+
 
 </FrameLayout>

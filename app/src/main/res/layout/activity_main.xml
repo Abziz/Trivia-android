@@ -124,9 +124,13 @@
                         android:textSize="18sp"
                         app:bootstrapText="Enter your name:" />
 
-                    <EditText
+                    <com.beardedhen.androidbootstrap.BootstrapEditText
                         android:id="@+id/name"
                         android:maxLines="1"
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        app:roundedCorners="true"
+                        app:bootstrapSize="lg"
                         android:inputType="text"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
